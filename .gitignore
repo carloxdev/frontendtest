@@ -1,0 +1,12 @@
+# OS GENERATED FILES
+# ---------------------------------------
+.DS_Store
+.Trashes
+Thumbs.db
+
+
+# JAVASCRIPT FILES
+# ---------------------------------------
+node_modules
+package-lock.json
+*.log
