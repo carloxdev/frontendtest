@@ -2,7 +2,7 @@ const path = require('path');
 const MiniCSSExtract = require('mini-css-extract-plugin');
 
 const basePath = __dirname;
-const distPath = '../build';
+const distPath = '../app/statics/build';
 
 const webpackInitConfig = {
     mode: 'development',
@@ -10,7 +10,8 @@ const webpackInitConfig = {
         extensions: ['.js']
     },
     entry: {
-        app: ['@babel/polyfill', './app/scripts/test.js'],
+        // app: ['@babel/polyfill', './app/scripts/test.js'],
+        landing: ['@babel/polyfill', './src/pages/landing/index.js'],
     },
     output: {
         path: path.join(basePath, distPath),
@@ -48,7 +49,7 @@ const webpackInitConfig = {
         //   <script src='http://localhost:9001/assets/bundle.js'>
         //   </script>        
         publicPath: '/test/',
-        contentBase: path.resolve(__dirname, "../app/views/"),
+        contentBase: path.resolve(__dirname, "../app/"),
         watchContentBase: true,
         compress: true,
         port: 9001
