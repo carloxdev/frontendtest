@@ -11,7 +11,7 @@ window.onload = function () {
     page = new Page()
 }
 
-/* ---------------- Page Object  ---------------- */
+/* ---------------- Page Object ---------------- */
 class Page {
     constructor () {
         this.container = document.getElementById("main")
