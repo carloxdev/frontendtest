@@ -4,23 +4,33 @@ export default class MainHeader {
 
     constructor () {
         this.menu = document.getElementById("main-header-menu")
-        this.icon = document.getElementById("main-header-icon")
-        
+        this.open_btn = document.getElementById("main-header-openbtn")
+        this.close_btn = document.getElementById("main-header-menu-closebtn")
         
         this.set_Events()
     }
 
     set_Events () {
-        this.button.addEventListener(
+        this.open_btn.addEventListener(
             "click",
-            this.click_Button.bind(this)
+            this.click_OpenIcon.bind(this)
+        )
+
+        this.close_btn.addEventListener(
+            "click",
+            this.click_CloseIcon.bind(this)
         )
     }
 
-    // click_Button (event) {
-    //     event.preventDefault()
-    //     this.open()
-    // }
+    click_OpenIcon (event) {
+        event.preventDefault()
+        this.menu.classList.add('main-header-menu--show')
+    }
+
+    click_CloseIcon (event) {
+        event.preventDefault()
+        this.menu.classList.remove('main-header-menu--show')
+    }
 
     // mouseleave_Container (event) {
     //     event.preventDefault()
