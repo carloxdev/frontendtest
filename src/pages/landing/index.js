@@ -1,5 +1,5 @@
 import '../../components/master/index.js'
-import MainHeader from '../../components/main-header/index.js'
+import HeaderMain from '../../components/header-main/index.js'
 
 import './styles.css'
 
@@ -17,6 +17,6 @@ window.onload = function () {
 /* ---------------- Page Object ---------------- */
 class Page {
     constructor () {
-        this.main_header = new MainHeader()
+        this.main_header = new HeaderMain()
     }
 }

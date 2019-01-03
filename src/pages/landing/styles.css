@@ -1,9 +1,140 @@
 .banner {
     margin: 0;
     padding: 0;
+    position: relative;
+
+    background-color: #EEF8FE;
+    transition: background-color .5s;
+
+    z-index: 1;
 }
 
     .banner img {
         width: 100%;
-        height: auto;   
+        height: auto;
+        opacity: .2;
     }
+
+    .banner .banner-info {
+        position: absolute;
+        top: .1em;
+        left: 0;
+
+        width: 100%;
+    }
+
+        .banner .banner-info .banner-info-title {
+            /* font-family: 'Gothic A1', sans-serif; */
+            font-weight: 700;
+            font-size: 1.5em;
+            padding-left: 1em;
+            text-align: center;
+        }
+
+        .banner .banner-info .banner-info-body {
+            background-color: #FC0009;
+            color: white;
+            font-size: 1.2em;
+
+            padding-top: 1em;
+            padding-bottom: 1em;
+            text-align: center;
+        }
+
+
+/* Landscape phones and up */
+@media (min-width: 576px) { 
+
+}
+
+/* Tablets and up */
+@media (min-width: 768px) { 
+
+    .banner img {
+        opacity: .7;
+    }
+
+    .banner .banner-info {
+        top: 2.5em;
+        width: 73%;
+    }    
+
+        .banner .banner-info .banner-info-title {
+            padding-left: .5em;
+            text-align: left;
+            margin-bottom: .9em;
+        }    
+
+        .banner .banner-info .banner-info-body { 
+            border-radius: 0 60px 60px 0;
+            font-size: 1.1em;
+        }
+} 
+
+/* Laptops and up */
+@media (min-width: 992px) { 
+
+    .banner .banner-info {
+        top: 4em;
+        width: 70%;
+    }    
+
+        .banner .banner-info .banner-info-title {
+            font-size: 2.5em;
+        }
+
+        .banner .banner-info .banner-info-body {
+            font-size: 1.3em;
+        }
+}
+
+/* Desktops and up) */
+@media (min-width: 1200px) { 
+
+    .banner .banner-info {
+        top: 5em;
+        width: 70%;
+    }    
+
+        .banner .banner-info .banner-info-title {
+            font-size: 4em;
+            margin-bottom: .7em;
+        }
+
+        .banner .banner-info .banner-info-body {
+            font-size: 2em;
+        }
+}
+
+/* HD Desktops and up */
+@media (min-width: 1900px) { 
+
+    .banner .banner-info {
+        top: 10em;
+    }
+
+        .banner .banner-info .banner-info-title {
+            margin-bottom: 1em;
+        }
+
+        .banner .banner-info .banner-info-body {
+        }
+
+}
+
+/* Retina Desktops and up */
+@media (min-width: 2000px) { 
+
+    .banner .banner-info {
+        top: 15em;
+    }
+
+        .banner .banner-info .banner-info-title {
+            font-size: 5em;
+        }
+
+        .banner .banner-info .banner-info-body {
+            font-size: 2em;
+        }
+
+}

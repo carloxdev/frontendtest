@@ -15,27 +15,50 @@
 <body>
     <div class="wrapper">
         <main class="main" id="main">
-            <header class="main-header">
-                <figure class="main-header-logo">
+            <header class="header-main">
+                <figure class="logo">
                     <img src="/static/images/logo.png" alt="logo">
                 </figure>
-                <nav class="main-header-menu" id="main-header-menu">
-                    <a href="/aboutus.html">Quienes Somos</a>
-                    <a href="/services.html">Servicios</a>
-                    <a href="/contact.html">Contacto</a>
-
-                    <a href="#" class="main-header-menu-closebtn" id="main-header-menu-closebtn">
-                        <i class="fas fa-times"></i>
+                <div class="menus">
+                    <nav class="menu-main" id="menu-main">
+                        <a href="#" class="btn-close" id="menu-main-btn-close">
+                            <i class="fas fa-times"></i>
+                        </a>
+                        <a href="#" class="selected"><span>Inicio</span></a>
+                        <a href="/aboutus.html"><span>Quienes Somos</span></a>
+                        <a href="/services.html"><span>Servicios</span></a>
+                        <a href="/contact.html"><span>Contacto</span></a>
+                    </nav>
+                    
+                    <div class="menu-language" id="menu-language">
+                        <ul class="menu-language-body">
+                            <li class="selected">    
+                                <a href="#">
+                                    <img src="/static/images/flags/mx.svg" alt="mx">
+                                    <i class="fas fa-angle-down" id="menu-language-indicator"></i>
+                                </a>
+                            </li>
+                            <li class="options">
+                                <a href="#">
+                                    <img src="/static/images/flags/us.svg" alt="us">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#" class="menu-main-btn-open" id="menu-main-btn-open">
+                        <i class="fas fa-bars"></i>
                     </a>
-                </nav>
-                <a href="#" class="main-header-openbtn" id="main-header-openbtn">
-                    <i class="fas fa-bars"></i>
-                </a>
+                </div>
             </header>
 
             <div class="content">
                 <figure class="banner">
                     <img src="/static/images/banner.jpg" alt="banner">
+
+                    <figcaption class="banner-info">
+                        <p class="banner-info-title">Bienvenido a LOP México</p>
+                        <p class="banner-info-body">¿Estas listo para descubrir nuevos canales de comercialización?</p>
+                    </figcaption>
                 </figure>
             </div>
         </main>

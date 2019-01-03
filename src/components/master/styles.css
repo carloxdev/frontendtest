@@ -1,7 +1,8 @@
 /* Titles */
-@import url('https://fonts.googleapis.com/css?family=Gothic+A1');
+@import url('https://fonts.googleapis.com/css?family=Gothic+A1:400,700');
 /* Body */
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+
 
 html, body {
     height: 100%;
