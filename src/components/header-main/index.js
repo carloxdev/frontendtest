@@ -32,25 +32,30 @@ export default class HeaderMain {
             this.mouseout_MenuLanguage.bind(this)
         )
     }
+    
+    select_Option (_id) {
+        let option = document.getElementById(_id)
+        option.classList.add('selected')
+    }
 
-    click_OpenIcon (event) {
-        event.preventDefault()
+    click_OpenIcon (_event) {
+        _event.preventDefault()
         this.menu_main.classList.add('menu-main--show')
     }
 
-    click_CloseIcon (event) {
-        event.preventDefault()
+    click_CloseIcon (_event) {
+        _event.preventDefault()
         this.menu_main.classList.remove('menu-main--show')
     }
 
-    mouseover_MenuLanguage (event) {
-        event.preventDefault()
+    mouseover_MenuLanguage (_event) {
+        _event.preventDefault()
         this.menu_language_indicator.classList.remove('fa-angle-down')
         this.menu_language_indicator.classList.add('fa-angle-up')
     }
 
-    mouseout_MenuLanguage (event) {
-        event.preventDefault()
+    mouseout_MenuLanguage (_event) {
+        _event.preventDefault()
         this.menu_language_indicator.classList.remove('fa-angle-up')
         this.menu_language_indicator.classList.add('fa-angle-down')
     }

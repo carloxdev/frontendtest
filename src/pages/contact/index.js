@@ -18,5 +18,6 @@ window.onload = function () {
 class Page {
     constructor () {
         this.main_header = new HeaderMain()
+        this.main_header.select_Option('page_contact')
     }
 }

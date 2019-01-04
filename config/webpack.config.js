@@ -1,8 +1,10 @@
 const path = require('path');
 const MiniCSSExtract = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 const basePath = __dirname;
-const distPath = '../app/statics/build';
+const distPath = '../app/static/build';
 
 const webpackInitConfig = {
     mode: 'development',
@@ -10,8 +12,10 @@ const webpackInitConfig = {
         extensions: ['.js']
     },
     entry: {
-        // app: ['@babel/polyfill', './app/scripts/test.js'],
-        landing: ['@babel/polyfill', './src/pages/landing/index.js'],
+        home: ['@babel/polyfill', './src/pages/home/index.js'],
+        aboutus: ['@babel/polyfill', './src/pages/aboutus/index.js'],
+        contact: ['@babel/polyfill', './src/pages/contact/index.js'],
+        services: ['@babel/polyfill', './src/pages/services/index.js'],
     },
     output: {
         path: path.join(basePath, distPath),
@@ -30,16 +34,26 @@ const webpackInitConfig = {
                 test: /\.css$/,
                 use: [
                     MiniCSSExtract.loader,
-                    'css-loader',
-                ],
+                    "css-loader"
+                ]
             },
         ]
     },
     plugins: [
         new MiniCSSExtract({
-            filename: "[name].css"
+            filename: "[name].min.css"
         })
     ],
+    optimization: {
+        minimizer: [
+            new UglifyJsPlugin({
+                cache: true,
+                parallel: true,
+                sourceMap: true // set to true if you want JS source maps
+            }),
+            new OptimizeCSSAssetsPlugin({})
+        ]
+    },
     devServer: {
         // This is where webpack-dev-server serves your bundle
         // which is created in memory.
@@ -48,7 +62,7 @@ const webpackInitConfig = {
         // prefixed with the 'publicPath', e.g.:
         //   <script src='http://localhost:9001/assets/bundle.js'>
         //   </script>        
-        publicPath: '/test/',
+        publicPath: '/static/',
         contentBase: path.resolve(__dirname, "../app/"),
         watchContentBase: true,
         compress: true,
