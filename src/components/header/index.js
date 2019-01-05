@@ -1,62 +1,100 @@
+import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './styles.css'
 
-export default class Header {
+class Header extends React.Component {
 
-    constructor () {
-        this.menu_main = document.getElementById("menu-main")
-        this.btn_open = document.getElementById("menu-main-btn-open")
-        this.btn_close = document.getElementById("menu-main-btn-close")
-        this.menu_language = document.getElementById("menu-language")
-        this.menu_language_indicator = document.getElementById("menu-language-indicator")
-        
-        this.set_Events()
+    constructor(props) {
+        super(props)
+        this.state =  {
+            logo_img: "/static/images/logo.png",
+            flag_mx: "/static/images/flags/mx.svg",
+            flag_us: '/static/images/flags/us.svg',
+            menu: false
+        }
+
+        this.open_Menu = this.open_Menu.bind(this);
+        this.close_Menu = this.close_Menu.bind(this);
     }
 
-    set_Events () {
-        this.btn_open.addEventListener(
-            "click",
-            this.click_OpenIcon.bind(this)
+    open_Menu () {
+        event.preventDefault()
+        this.setState({
+            menu: true
+        })
+    }
+
+    close_Menu () {
+        event.preventDefault()
+        this.setState({
+            menu: false
+        })
+    }
+
+    render() {
+
+        var menu_class = "menu-main"
+        if (this.state.menu) {
+            menu_class = "menu-main menu-main--show"
+        }
+
+        var page_home = ""
+        if (this.props.option = "home") {
+            page_home = "selected"
+        }
+
+        var page_aboutus = ""
+        if (this.props.option = "aboutus") {
+            page_aboutus = "selected"
+        }
+
+        var page_services = ""
+        if (this.props.option = "services") {
+            page_services = "selected"
+        }
+
+        var page_contact = ""
+        if (this.props.option = "contact") {
+            page_contact = "selected"
+        }
+
+        return (
+            <header className="header">
+                <figure className="logo">
+                    <img src={this.state.logo_img} alt="logo" />
+                </figure>
+                <div className="menus">
+                    <nav className={menu_class}>
+                        <a href="#" className="btn-close" onClick={this.close_Menu}>
+                            <FontAwesomeIcon icon="times" />
+                        </a>
+                        <a className={page_home} href="/home.html"><span>Inicio</span></a>
+                        <a className={page_aboutus} href="/aboutus.html"><span>Quienes Somos</span></a>
+                        <a className={page_services} href="/services.html"><span>Servicios</span></a>
+                        <a className={page_contact} href="/contact.html"><span>Contacto</span></a>
+                    </nav>
+                    <div className="menu-language" id="menu-language">
+                        <ul className="menu-language-body">
+                            <li className="selected">    
+                                <a href="#">
+                                    <img src={this.state.flag_mx} alt="us" />
+                                    <FontAwesomeIcon icon="angle-down" />
+                                </a>
+                            </li>
+                            <li className="options">
+                                <a href="#">
+                                    <img src={this.state.flag_us} alt="us" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#" className="menu-main-btn-open" onClick={this.open_Menu} >
+                        <i className="fas fa-bars"></i>
+                    </a>
+                </div>
+            </header>
         )
-
-        this.btn_close.addEventListener(
-            "click",
-            this.click_CloseIcon.bind(this)
-        )
-
-        this.menu_language.addEventListener(
-            "mouseover",
-            this.mouseover_MenuLanguage.bind(this)
-        )
-        this.menu_language.addEventListener(
-            "mouseout",
-            this.mouseout_MenuLanguage.bind(this)
-        )
-    }
-    
-    select_Option (_id) {
-        let option = document.getElementById(_id)
-        option.classList.add('selected')
-    }
-
-    click_OpenIcon (_event) {
-        _event.preventDefault()
-        this.menu_main.classList.add('menu-main--show')
-    }
-
-    click_CloseIcon (_event) {
-        _event.preventDefault()
-        this.menu_main.classList.remove('menu-main--show')
-    }
-
-    mouseover_MenuLanguage (_event) {
-        _event.preventDefault()
-        this.menu_language_indicator.classList.remove('fa-angle-down')
-        this.menu_language_indicator.classList.add('fa-angle-up')
-    }
-
-    mouseout_MenuLanguage (_event) {
-        _event.preventDefault()
-        this.menu_language_indicator.classList.remove('fa-angle-up')
-        this.menu_language_indicator.classList.add('fa-angle-down')
     }
 }
+
+export default Header

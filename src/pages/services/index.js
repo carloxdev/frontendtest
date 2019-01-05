@@ -1,8 +1,20 @@
-import '../../components/master/index.js'
-import '../../components/footer/index.js'
-import Header from '../../components/header/index.js'
+import React from 'react';
+import ReactDOM from 'react-dom'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
+
+import '../../components/master/index.js'
+// import '../../components/footer/index.js'
+import Header from '../../components/header/index.js'
 import './styles.css'
+
+library.add(faTimes)
+library.add(faBars)
+library.add(faAngleDown)
 
 
 /* ---------------- GLOBAL  ---------------- */
@@ -18,7 +30,9 @@ window.onload = function () {
 /* ---------------- Page Object ---------------- */
 class Page {
     constructor () {
-        this.header = new Header()
-        this.header.select_Option('page_services')
+        ReactDOM.render(
+            <Header />,
+            document.getElementById('main')
+        )
     }
 }

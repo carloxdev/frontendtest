@@ -9,7 +9,7 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 
 import '../../components/master/index.js'
 // import '../../components/footer/index.js'
-import HeaderHome from '../../components/header-home/index.js'
+import Header from '../../components/header/index.js'
 import './styles.css'
 
 library.add(faTimes)
@@ -31,7 +31,7 @@ window.onload = function () {
 class Page {
     constructor () {
         ReactDOM.render(
-            <HeaderHome />,
+            <Header />,
             document.getElementById('main')
         )
     }

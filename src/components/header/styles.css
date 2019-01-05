@@ -16,7 +16,6 @@
             font-size: 2em;
         }
     
-
     .menus {
         display: flex;
         align-items: center;
@@ -45,16 +44,26 @@
             }
 
                 .menu-language .menu-language-body .selected {
-                    color: #656a6f;
                     padding: .3em .3em .2em .3em;
                 }
+
+                    .menu-language .menu-language-body .selected a {
+                        display: flex;
+                        align-items: center;
+                        color: #656a6f;
+                    }
+
+                        .menu-language .menu-language-body .selected a img {
+                            margin: .1em; 
+                            height: 1em;
+                        }
 
                 .menu-language .menu-language-body .selected:hover {
                     background-color: #ecf1f5;
                 }
 
-                    .menu-language .menu-language-body .selected img {
-                        height: 1em;
+                    .menu-language .menu-language-body .selected:hover a {
+                        color: black;
                     }
 
                 .menu-language .menu-language-body .options {
