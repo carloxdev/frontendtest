@@ -5,6 +5,7 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 const basePath = __dirname;
 const distPath = '../app/static/build';
+const distImages = '../../../app/static/images/';
 
 const webpackInitConfig = {
     mode: 'development',
@@ -25,7 +26,7 @@ const webpackInitConfig = {
         rules: [
             {
                 test: /\.js$/,
-                exclude: /node_modules/,
+                exclude: /(node_modules|build)/,
                 use: [
                   'babel-loader',
                 ],
@@ -34,9 +35,21 @@ const webpackInitConfig = {
                 test: /\.css$/,
                 use: [
                     MiniCSSExtract.loader,
-                    "css-loader"
+                    "css-loader",
                 ]
             },
+            {
+                test: /\.(png|jpg|gif)$/,
+                use: [
+                  {
+                    loader: 'file-loader',
+                    options: {
+                      outputPath: distImages,
+                      // publicPath: 'images/',
+                    },
+                  },
+                ]
+            }
         ]
     },
     plugins: [
@@ -67,7 +80,7 @@ const webpackInitConfig = {
         watchContentBase: true,
         compress: true,
         port: 9001
-    }
+    },
 };
 
 module.exports = webpackInitConfig;

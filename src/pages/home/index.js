@@ -1,5 +1,6 @@
 import '../../components/master/index.js'
-import HeaderMain from '../../components/header-main/index.js'
+import '../../components/footer/index.js'
+import Header from '../../components/header/index.js'
 
 import './styles.css'
 
@@ -17,7 +18,7 @@ window.onload = function () {
 /* ---------------- Page Object ---------------- */
 class Page {
     constructor () {
-        this.main_header = new HeaderMain()
-        this.main_header.select_Option('page_home')
+        this.header = new Header()
+        this.header.select_Option('page_home')
     }
 }

@@ -1,6 +1,6 @@
 import './styles.css'
 
-export default class HeaderMain {
+export default class Header {
 
     constructor () {
         this.menu_main = document.getElementById("menu-main")
