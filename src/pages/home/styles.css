@@ -42,17 +42,21 @@
         }
 
 .content {
-    padding-top: 4em;
+    padding-top: 3em;
     padding-left: 0;
     padding-right: 0;
-    padding-bottom: 1em;
+    padding-bottom: 0;
 }
 
     .article {
-        background-color: #FFFFFF;
+        background-color: white;
         
         padding: 4em 1.5em;
         border-bottom: 1px solid #ebecec;
+    }
+
+    .article:nth-child(2) {
+        background-color: #F7F8F8;
     }
 
         .article-header {
@@ -71,16 +75,41 @@
             }
 
                 .article-body-img img {
-                    width: auto%;
+                    width: auto;
                     height: 10em;
                 }
-                
 
             .article-body-text {
                 text-align: center;
                 color: #4A4F54;
             }
 
+    .success {
+        padding: 4em 1.5em;
+        background-color: #F7F8F8;
+    }
+
+        .success-header {
+            font-size: 1.2em;
+            font-weight: 700;
+
+            text-align: center;
+        }
+
+        .success-body {
+            padding-top: 2.4em;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .success-body-img {
+                text-align: center;
+            }
+
+                .success-body-img img {
+                    width: 100%;
+                    height: auto;
+                }
 
 /* Landscape phones and up */
 @media (min-width: 576px) { 
@@ -109,6 +138,57 @@
             border-radius: 0 60px 60px 0;
             font-size: 1.1em;
         }
+
+    .content {
+        padding-top: 1em;
+    }
+        .article {}
+
+        .article:nth-child(2) .article-body {
+            flex-direction: row-reverse;
+            padding-right: 0em;
+            padding-left: 3em;
+        }
+
+            .article-header {
+                font-size: 1.5em;
+            }
+
+            .article-body {
+                display: flex;
+                align-items: center;
+                padding-right: 3em;
+            }
+
+                .article-body-img {
+                    width: 40%;
+                }
+
+                .article-body-text {
+                    font-size: 1.2em;
+                    width: 60%;
+                    
+                }
+
+        .success {}
+        
+            .success-header {
+                font-size: 1.5em;
+            }        
+
+            .success-body { 
+                flex-direction: row;
+                align-items: center;
+            }
+
+                .success-body-img { 
+                    width: 49%;
+                }
+
+                    .success-body-img img {
+                        width: 100%;
+                        height: auto;
+                    }
 } 
 
 /* Laptops and up */
