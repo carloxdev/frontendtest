@@ -41,6 +41,46 @@
             text-align: center;
         }
 
+.content {
+    padding-top: 4em;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 1em;
+}
+
+    .article {
+        background-color: #FFFFFF;
+        
+        padding: 4em 1.5em;
+        border-bottom: 1px solid #ebecec;
+    }
+
+        .article-header {
+            font-size: 1.2em;
+            font-weight: 700;
+
+            text-align: center;
+        }
+
+        .article-body {
+            padding-top: 2.4em;
+        }
+
+            .article-body-img {
+                text-align: center;
+            }
+
+                .article-body-img img {
+                    width: auto%;
+                    height: 10em;
+                }
+                
+
+            .article-body-text {
+                text-align: center;
+                color: #4A4F54;
+            }
+
 
 /* Landscape phones and up */
 @media (min-width: 576px) { 

@@ -31,35 +31,40 @@ class Header extends React.Component {
         })
     }
 
-    render() {
-
+    set_MenuClass () {
         var menu_class = "menu-main"
         if (this.state.menu) {
             menu_class = "menu-main menu-main--show"
         }
 
+        return menu_class
+    }
+
+    render() {
+        var menu_class = this.set_MenuClass()
+
         var page_home = ""
-        if (this.props.option = "home") {
+        if (this.props.option == "home") {
             page_home = "selected"
         }
 
         var page_aboutus = ""
-        if (this.props.option = "aboutus") {
+        if (this.props.option == "aboutus") {
             page_aboutus = "selected"
         }
 
         var page_services = ""
-        if (this.props.option = "services") {
+        if (this.props.option == "services") {
             page_services = "selected"
         }
 
         var page_contact = ""
-        if (this.props.option = "contact") {
+        if (this.props.option == "contact") {
             page_contact = "selected"
         }
 
         return (
-            <header className="header">
+            <div className="header">
                 <figure className="logo">
                     <img src={this.state.logo_img} alt="logo" />
                 </figure>
@@ -71,7 +76,7 @@ class Header extends React.Component {
                         <a className={page_home} href="/home.html"><span>Inicio</span></a>
                         <a className={page_aboutus} href="/aboutus.html"><span>Quienes Somos</span></a>
                         <a className={page_services} href="/services.html"><span>Servicios</span></a>
-                        <a className={page_contact} href="/contact.html"><span>Contacto</span></a>
+                        <a className={page_contact} href="/contact.html"><span>Contactanos</span></a>
                     </nav>
                     <div className="menu-language" id="menu-language">
                         <ul className="menu-language-body">
@@ -89,10 +94,10 @@ class Header extends React.Component {
                         </ul>
                     </div>
                     <a href="#" className="menu-main-btn-open" onClick={this.open_Menu} >
-                        <i className="fas fa-bars"></i>
+                        <FontAwesomeIcon icon="bars" />
                     </a>
                 </div>
-            </header>
+            </div>
         )
     }
 }
