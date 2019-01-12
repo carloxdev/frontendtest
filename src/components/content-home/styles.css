@@ -1,0 +1,27 @@
+
+.content {
+    padding-top: 2em;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+
+
+/* Landscape phones and up */
+@media (min-width: 576px) { 
+    .content {
+        padding-top: 0;
+    }
+
+}
+
+
+/* HD Desktops and up */
+@media (min-width: 1900px) { 
+
+    .content {
+        padding-top: 1em;
+    }
+   
+}
+

@@ -1,0 +1,106 @@
+.allies {
+    background-color: #F7F8F8;
+    padding: 1em 1em 3em;
+}
+
+    .allies-title {
+        font-size: 1em;
+        font-weight: 700;
+        text-align: center;
+        color: #4A4F54;
+
+        margin: 1.5em .5em .5em;
+    }
+
+    .allies-body {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        text-align: center;
+    }
+
+        .allies-body-item {
+            width: 100%;
+
+            margin-top: 1em;
+            margin-bottom: 1em;
+
+            padding-top: .5em;
+
+            background: white;
+            border: 1px solid #d5d5d5;
+            border-radius: 4px;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+            .allies-body-item header {
+                color: #434343;
+                font-size: 1.25em;
+                font-weight: 500;
+                text-transform: uppercase;
+                margin-bottom: .1em;
+            }
+
+            .allies-body-item figure {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .allies-body-item figure img {
+                width: 100%;
+                height: auto;
+            }
+
+                .allies-body-item figure figcaption {
+                    
+                }
+
+                    .allies-body-item figure figcaption a {
+                        color: #686666;
+                        font-weight: 500;
+                        text-decoration: underline;
+                    }
+            
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+    .allies-body {
+        justify-content: space-evenly;
+    }
+
+        .allies-body-item {
+            width: 45%;
+        }
+
+}
+
+/* Tablets and up */
+@media (min-width: 768px) { 
+    
+    .allies-title {
+        font-size: 1.5em;
+        padding-left: 1em;
+        padding-right: 1em;
+        margin-bottom: 1em;
+    }
+
+        .allies-body-item {
+            width: 35%;
+        }
+}
+
+
+
+/* HD Desktops and up */
+@media (min-width: 1900px) { 
+
+    .allies-title {
+        font-size: 2em;
+    }
+}

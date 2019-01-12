@@ -9,6 +9,8 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 
 import '../../components/master/index.js'
 import Header from '../../components/header/index.js'
+import BannerHome from '../../components/banner-home/index.js'
+import ContentHome from '../../components/content-home/index.js'
 import Footer from '../../components/footer/index.js'
 import './styles.css'
 
@@ -33,6 +35,14 @@ class Page {
         ReactDOM.render(
             <Header option="home" />,
             document.getElementById('header')
+        )
+        ReactDOM.render(
+            <BannerHome />,
+            document.getElementById('banner')
+        )
+        ReactDOM.render(
+            <ContentHome />,
+            document.getElementById('content')
         )
         ReactDOM.render(
             <Footer />,

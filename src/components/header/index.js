@@ -18,87 +18,56 @@ class Header extends React.Component {
     }
 
     open_Menu () {
-        event.preventDefault()
         this.setState({
             menu: true
         })
     }
 
     close_Menu () {
-        event.preventDefault()
         this.setState({
             menu: false
         })
     }
 
-    set_MenuClass () {
-        var menu_class = "menu-main"
-        if (this.state.menu) {
-            menu_class = "menu-main menu-main--show"
-        }
-
-        return menu_class
-    }
-
     render() {
-        var menu_class = this.set_MenuClass()
+        const menu_class = (this.state.menu) ? "menu-main menu-main--show" : "menu-main"
 
-        var page_home = ""
-        if (this.props.option == "home") {
-            page_home = "selected"
-        }
+        const option = this.props.option
 
-        var page_aboutus = ""
-        if (this.props.option == "aboutus") {
-            page_aboutus = "selected"
-        }
-
-        var page_services = ""
-        if (this.props.option == "services") {
-            page_services = "selected"
-        }
-
-        var page_contact = ""
-        if (this.props.option == "contact") {
-            page_contact = "selected"
-        }
-
-        return (
-            <div className="header">
-                <figure className="logo">
-                    <img src={this.state.logo_img} alt="logo" />
-                </figure>
-                <div className="menus">
-                    <nav className={menu_class}>
-                        <a href="#" className="btn-close" onClick={this.close_Menu}>
-                            <FontAwesomeIcon icon="times" />
-                        </a>
-                        <a className={page_home} href="/home.html"><span>Inicio</span></a>
-                        <a className={page_aboutus} href="/aboutus.html"><span>Quienes Somos</span></a>
-                        <a className={page_services} href="/services.html"><span>Servicios</span></a>
-                        <a className={page_contact} href="/contact.html"><span>Contactanos</span></a>
-                    </nav>
-                    <div className="menu-language" id="menu-language">
-                        <ul className="menu-language-body">
-                            <li className="selected">    
-                                <a href="#">
-                                    <img src={this.state.flag_mx} alt="us" />
-                                    <FontAwesomeIcon icon="angle-down" />
-                                </a>
-                            </li>
-                            <li className="options">
-                                <a href="#">
-                                    <img src={this.state.flag_us} alt="us" />
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <a href="#" className="menu-main-btn-open" onClick={this.open_Menu} >
-                        <FontAwesomeIcon icon="bars" />
+        return [
+            <figure key="1" className="logo">
+                <img src={this.state.logo_img} alt="logo" />
+            </figure >,
+            <div key="2" className="menus">
+                <nav className={menu_class}>
+                    <a href="#" className="btn-close" onClick={this.close_Menu}>
+                        <FontAwesomeIcon icon="times" />
                     </a>
+                    <a className={ option === 'home' ? 'selected' : '' } href="/home.html"><span>Inicio</span></a>
+                    <a className={ option === 'about' ? 'selected' : '' } href="/about.html"><span>Quienes Somos</span></a>
+                    <a className={ option === 'services' ? 'selected' : '' } href="/services.html"><span>Servicios</span></a>
+                    <a className={ option === 'contact' ? 'selected' : '' } href="/contact.html"><span>Contactanos</span></a>
+                </nav>
+                <div className="menu-language" id="menu-language">
+                    <ul className="menu-language-body">
+                        <li className="selected">    
+                            <a href="#">
+                                <img src={this.state.flag_mx} alt="us" />
+                                <FontAwesomeIcon icon="angle-down" />
+                            </a>
+                        </li>
+                        <li className="options">
+                            <a href="#">
+                                <img src={this.state.flag_us} alt="us" />
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-        )
+                <a href="#" className="menu-main-btn-open" onClick={this.open_Menu} >
+                    <FontAwesomeIcon icon="bars" />
+                </a>
+            </div>   
+        ]
     }
 }
 

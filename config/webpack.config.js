@@ -14,7 +14,7 @@ const webpackInitConfig = {
     },
     entry: {
         home: ['@babel/polyfill', './src/pages/home/index.js'],
-        aboutus: ['@babel/polyfill', './src/pages/aboutus/index.js'],
+        about: ['@babel/polyfill', './src/pages/about/index.js'],
         contact: ['@babel/polyfill', './src/pages/contact/index.js'],
         services: ['@babel/polyfill', './src/pages/services/index.js'],
     },

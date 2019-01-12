@@ -11,15 +11,12 @@ html, body {
 body {
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    background-size: 100% auto;
 }
 
 a {
     text-decoration: none;
     color: black;
 }
-
 
 .wrapper {
     height: 100%;
@@ -41,23 +38,37 @@ a {
 
     .footer {
         flex-shrink: 0;
-        padding: 1em .5em;
-        
     }
 
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
+/* HD Desktops and up */
+@media (min-width: 1900px) {
+
+        .wrapper {
+            align-items: center;
+            
+        }
+            .main {
+                width: 85%;
+
+                border-left: 1px solid #ebebeb;
+                border-right: 1px solid #ebebeb;
+            }
+
+            .footer {
+                width: 85%;
+                border: 1px solid #2F3533;
+            }
 }
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
-} 
+/* Retina Desktops and up */
+@media (min-width: 2000px) {
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
-}
+    .main {
+        width: 62%;
+    }
 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
+    .footer {
+        width: 62%;
+    }
 }

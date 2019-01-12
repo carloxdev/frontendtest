@@ -1,0 +1,77 @@
+.banner {
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    background-color: #ffffff;
+    transition: background-color .5s;
+
+    z-index: 1;
+    border-bottom: 4px solid #FC0009;
+}
+
+    .banner img {
+        width: 100%;
+        height: auto;
+        opacity: .2;
+        filter: blur(3px);
+    }
+
+    .banner .banner-info {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        text-shadow: -1px -9px 9px #ffffff;
+    }
+
+        .banner .banner-info .banner-info-title {
+            font-weight: 700;
+            font-size: 1.1em;
+            text-align: center;
+            padding: 0 .2em 0;
+        }
+
+/* Landscape phones and up */
+@media (min-width: 576px) {
+
+    .banner .banner-info {
+        /* top: 1.2em; */
+    }
+
+        .banner .banner-info .banner-info-title { 
+            font-size: 2em;
+        }
+}
+
+/* Tablets and up */
+@media (min-width: 768px) {  
+
+    .banner .banner-info {
+        top: 2em;
+    }
+
+    .banner .banner-info .banner-info-title {
+        font-size: 2.2em;    
+    }
+}
+
+/* Desktops and up) */
+@media (min-width: 1200px) {  
+    .banner .banner-info {
+        top: 3em;
+    }
+
+    .banner .banner-info .banner-info-title {
+        font-size: 3em;
+    }
+}
+
+/* HD Desktops and up */
+@media (min-width: 1900px) { 
+
+    .banner .banner-info .banner-info-title {
+        font-size: 3.5em;
+    }
+}

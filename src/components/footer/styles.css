@@ -1,4 +1,4 @@
-.footer {
+.footer-wrap {
     display: flex;
     background-color: #2F3533;
     flex-direction: column;
@@ -19,3 +19,20 @@
             color: white;
             text-decoration: underline;
         }
+
+
+/* Tablets and up */
+@media (min-width: 768px) { 
+
+    .footer-wrap {
+        padding: 1em .5em 1em;
+    }
+
+        .footer-header { 
+            font-size: 1em;
+        }
+
+        .footer-body {
+            font-size: .8em;
+        }
+}

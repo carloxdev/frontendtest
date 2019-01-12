@@ -5,10 +5,12 @@
 
     border-bottom: #ebebeb solid 1px;
     position: relative;
+    background-color: white;
 }
 
     .logo {
         margin: .3em;
+        padding-left: .4em;
     }
 
         .logo img {
