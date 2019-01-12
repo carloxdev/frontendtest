@@ -5,6 +5,7 @@ import './styles.css'
 const PopupInfo = (props) => {
     const class_str = props.popup_active == true ? "popup-info popup-info--show" : "popup-info"
     let title = ""
+    let body = ""
 
     if (props.option === "moderno") {
         title = "Gestion de canal moderno"
