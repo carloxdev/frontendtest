@@ -15,14 +15,14 @@
     justify-content: center; */
 }
 
-.popup-info:active body {
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
- }
-
 .popup-info--show {
     display: flex;
     justify-content: center;
+}
+
+.popup-info--show-body {
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 
     .popup-info-wrap {
@@ -87,6 +87,11 @@
             box-sizing: border-box;
         }
 
+            .information {
+                font-size: 1em;
+                color: #555353;
+            }
+
 
 /* Add Animation */
 @-webkit-keyframes animatetop {
@@ -98,3 +103,13 @@
     from {top:-300px; opacity:0}
     to {top:0; opacity:1}
 }
+
+        
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+    .information {
+        font-size: 1.5em;
+    }
+}
+    

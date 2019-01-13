@@ -17,13 +17,15 @@ class Header extends React.Component {
         this.close_Menu = this.close_Menu.bind(this);
     }
 
-    open_Menu () {
+    open_Menu (e) {
+        e.preventDefault()
         this.setState({
             menu: true
         })
     }
 
-    close_Menu () {
+    close_Menu (e) {
+        e.preventDefault()
         this.setState({
             menu: false
         })

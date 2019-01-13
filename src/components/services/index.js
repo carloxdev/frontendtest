@@ -25,19 +25,25 @@ class Services extends React.Component {
     }
 
     show_Info (option, e) {
+        e.preventDefault()
+        document.body.classList.add("popup-info--show-body")
+        console.log(this)
         this.setState({
             popup_active : true,
             option: option
         })
     }
 
-    close_Popup () {
+    close_Popup (e) {
+        e.preventDefault()
+        document.body.classList.remove("popup-info--show-body")
         this.setState({
             popup_active : false
         })
     }
 
     close_WithKeyPopup (e) {
+        e.preventDefault()
         if (e.keyCode == 27) {
             this.setState({
                 popup_active : false
