@@ -19,6 +19,7 @@ class Header extends React.Component {
 
     open_Menu (e) {
         e.preventDefault()
+        document.body.classList.add("menu-main--show-body")
         this.setState({
             menu: true
         })
@@ -26,6 +27,7 @@ class Header extends React.Component {
 
     close_Menu (e) {
         e.preventDefault()
+        document.body.classList.remove("menu-main--show-body")
         this.setState({
             menu: false
         })

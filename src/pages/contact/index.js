@@ -10,6 +10,7 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import '../../components/master/index.js'
 import Header from '../../components/header/index.js'
 import Footer from '../../components/footer/index.js'
+import FormContact from '../../components/form-contact/index.js'
 import './styles.css'
 
 library.add(faTimes)
@@ -33,6 +34,10 @@ class Page {
         ReactDOM.render(
             <Header option="contact" />,
             document.getElementById('header')
+        )
+        ReactDOM.render(
+            <FormContact />,
+            document.getElementById('form-contact')
         )
         ReactDOM.render(
             <Footer />,

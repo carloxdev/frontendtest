@@ -1,0 +1,14 @@
+.form-contact {
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+    .form-contact-field {
+        
+    }
+
+    .form-contact-field--error {
+
+    }
