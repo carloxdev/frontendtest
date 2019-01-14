@@ -4,7 +4,7 @@ import PopupInfo from '../popup-info/index.js'
 import '../buttons/index.js'
 import './styles.css'
 
-class Services extends React.Component {
+class ListServices extends React.Component {
 
     constructor(props) {
         super(props)
@@ -60,13 +60,13 @@ class Services extends React.Component {
                 close_popup={this.close_Popup.bind(this)}
                 key="1">
             </PopupInfo>,
-            <div className="services" key="2">
-                <div className="services-title">
+            <div className="list-services" key="2">
+                <div className="list-services-title">
                     Ofrecemos soluciones de alto impacto para su empresa para mejorar la rentabilidad de su operación con una visión holística y sustentable de negocio.
                 </div>
-                <div className="services-body">
+                <div className="list-services-body">
 
-                    <article className="services-body-item">
+                    <article className="list-services-body-item">
                         <figure>
                             <img src="static/images/icons/online-store.svg" alt="canal_moderno"/>
                             <figcaption>
@@ -81,7 +81,7 @@ class Services extends React.Component {
                         </footer>
                     </article>
 
-                    <article className="services-body-item">
+                    <article className="list-services-body-item">
                         <figure>
                             <img src="static/images/icons/store.svg" alt="canal_detalle"/>
                             <figcaption>
@@ -96,7 +96,7 @@ class Services extends React.Component {
                         </footer>
                     </article>
 
-                    <article className="services-body-item">
+                    <article className="list-services-body-item">
                         <figure>
                             <img src="static/images/icons/line-graphic.svg" alt="planeacion"/>
                             <figcaption>
@@ -111,7 +111,7 @@ class Services extends React.Component {
                         </footer>
                     </article>
 
-                    <article className="services-body-item">
+                    <article className="list-services-body-item">
                         <figure>
                             <img src="static/images/icons/crecimiento2.svg" alt="inversion"/>
                             <figcaption>
@@ -126,7 +126,7 @@ class Services extends React.Component {
                         </footer>
                     </article>
 
-                    <article className="services-body-item">
+                    <article className="list-services-body-item">
                         <figure>
                             <img src="static/images/icons/businessman.svg" alt="coaching"/>
                             <figcaption>
@@ -141,7 +141,7 @@ class Services extends React.Component {
                         </footer>
                     </article>
 
-                    <article className="services-body-item">
+                    <article className="list-services-body-item">
                         <figure>
                             <img src="static/images/icons/red.svg" alt="capacitacion"/>
                             <figcaption>
@@ -161,6 +161,6 @@ class Services extends React.Component {
     }
 }
 
-export default Services;
+export default ListServices;
 
 

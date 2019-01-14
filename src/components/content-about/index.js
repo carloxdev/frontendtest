@@ -1,13 +1,13 @@
 import React from 'react'
 import './styles.css'
 
-import Team from '../team/index.js'
-import Allies from '../allies/index.js'
+import ListTeam from '../list-team/index.js'
+import ListAllies from '../list-allies/index.js'
 
 const ContentAbout = () => {
     return [
-        <Team key="1"></Team>,
-        <Allies key="2"></Allies>
+        <ListTeam key="1"></ListTeam>,
+        <ListAllies key="2"></ListAllies>
     ]
 }
 

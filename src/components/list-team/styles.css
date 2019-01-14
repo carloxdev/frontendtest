@@ -1,10 +1,10 @@
-.team {
+.list-team {
 
     margin-bottom: 2em;
     
 }
 
-    .team-title {
+    .list-team-title {
         font-size: 1em;
         font-weight: 700;
         text-align: center;
@@ -13,7 +13,7 @@
         margin: 1.5em .5em .5em;
     }
 
-    .team-body {
+    .list-team-body {
         text-align: center;
         display: flex;
         flex-wrap: wrap;
@@ -21,7 +21,7 @@
         margin: 1em;
     }
 
-        .team-body-item {
+        .list-team-body-item {
             background: #f1f1f1;
             box-sizing: border-box;
             width: 100%;
@@ -33,21 +33,21 @@
             border-radius: 4px;
         }
 
-            .team-body-item img {
+            .list-team-body-item img {
                 width: auto;
                 height: 18em;
                 border-radius: 50%;
                 margin-bottom: 1.8em;
             }
 
-                    .team-body-item-name {
+                    .list-team-body-item-name {
                         color: #434343;
                         font-size: 1.25em;
                         text-transform: uppercase;
                         margin-bottom: .1em;
                     }
 
-                    .team-body-item-job {
+                    .list-team-body-item-job {
                         color: #686666;
                         font-weight: 500;
                     }
@@ -56,23 +56,23 @@
 /* Tablets and up */
 @media (min-width: 768px) { 
     
-    .team-title {
+    .list-team-title {
         font-size: 1.5em;
         padding-left: 1em;
         padding-right: 1em;
         margin-bottom: 1em;
     }
 
-    .team-body {
+    .list-team-body {
         justify-content: center;
     }
 
-        .team-body-item { 
+        .list-team-body-item { 
             width: 45%;
             margin-left: 1em;
         }
 
-            .team-body-item img {
+            .list-team-body-item img {
                 width: auto;
                 height: 18em;
                 border-radius: 50%;
@@ -83,7 +83,7 @@
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
 
-    .team-body-item { 
+    .list-team-body-item { 
         margin-left: 1.1em;
     }
 
@@ -92,11 +92,11 @@
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
 
-    .team-body {
+    .list-team-body {
         justify-content: space-evenly;
     }
 
-        .team-body-item { 
+        .list-team-body-item { 
             width: 30%;
         }
 }
@@ -105,7 +105,7 @@
 /* HD Desktops and up */
 @media (min-width: 1900px) { 
 
-    .team-title {
+    .list-team-title {
         font-size: 2em;
     }
 

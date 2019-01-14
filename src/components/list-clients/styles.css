@@ -1,26 +1,26 @@
-.clients {
+.list-clients {
     padding: 4em 1.5em;
     background-color: #F7F8F8;
 }
 
-    .clients-header {
+    .list-clients-header {
         font-size: 1.2em;
         font-weight: 700;
 
         text-align: center;
     }
 
-    .clients-body {
+    .list-clients-body {
         padding-top: 2.4em;
         display: flex;
         flex-direction: column;
     }
 
-        .clients-body-img {
+        .list-clients-body-img {
             text-align: center;
         }
 
-            .clients-body-img img {
+            .list-clients-body-img img {
                 width: 100%;
                 height: auto;
             }
@@ -28,20 +28,20 @@
 /* Tablets and up */
 @media (min-width: 768px) { 
  
-    .clients-header {
+    .list-clients-header {
         font-size: 1.5em;
     }        
 
-    .clients-body { 
+    .list-clients-body { 
         flex-direction: row;
         align-items: center;
     }
 
-        .clients-body-img { 
+        .list-clients-body-img { 
             width: 49%;
         }
 
-            .clients-body-img img {
+            .list-clients-body-img img {
                 width: 100%;
                 height: auto;
             }
@@ -50,7 +50,7 @@
 /* HD Desktops and up */
 @media (min-width: 1900px) { 
 
-    .clients-header {
+    .list-clients-header {
         font-size: 2em;
     }
 }

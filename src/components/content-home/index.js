@@ -1,13 +1,13 @@
 import React from 'react'
 import './styles.css'
 
-import Promo from '../promo/index.js'
-import Clients from '../clients/index.js'
+import ListPromo from '../list-promo/index.js'
+import ListClients from '../list-clients/index.js'
 
 const ContentHome = () => {
     return [
-        <Promo key="1"></Promo>,
-        <Clients key="2"></Clients>
+        <ListPromo key="1"></ListPromo>,
+        <ListClients key="2"></ListClients>
     ]
 }
 

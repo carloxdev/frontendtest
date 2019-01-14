@@ -11,7 +11,7 @@ import { faArrowAltCircleRight} from '@fortawesome/free-solid-svg-icons'
 
 import '../../components/master/index.js'
 import Header from '../../components/header/index.js'
-import Services from '../../components/services/index.js'
+import ListServices from '../../components/list-services/index.js'
 import Footer from '../../components/footer/index.js'
 import './styles.css'
 
@@ -41,7 +41,7 @@ class Page {
             document.getElementById('header')
         )
         ReactDOM.render(
-            <Services />,
+            <ListServices />,
             document.getElementById('content')
         )
         ReactDOM.render(

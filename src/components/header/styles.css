@@ -171,7 +171,7 @@
         background-color: white;
         text-align: right;
         border-right: 1px solid #bac1c7;
-        padding: .2em 0 .2em 0;
+        padding: .3em 0 .3em 0;
     }
 
         .menu-main a { 
@@ -184,7 +184,8 @@
 
         .menu-main .selected > span {
             background-color: white;
-            color:#52575C; 
+            color:#52575C;
+            padding: .4em .4em .1em;
         }
 
         .menu-main .btn-close { 

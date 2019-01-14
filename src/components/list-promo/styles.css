@@ -1,36 +1,36 @@
 
-.promo {
+.list-promo {
     background-color: white;
     
     padding: 3em 1.5em;
     border-bottom: 1px solid #ebecec;
 }
 
-.promo:nth-child(2) {
+.list-promo:nth-child(2) {
     background-color: #F7F8F8;
 }
 
-    .promo-header {
+    .list-promo-header {
         font-size: 1.2em;
         font-weight: 700;
 
         text-align: center;
     }
 
-    .promo-body {
+    .list-promo-body {
         padding-top: 1em;
     }
 
-        .promo-body-img {
+        .list-promo-body-img {
             text-align: center;
         }
 
-            .promo-body-img img {
+            .list-promo-body-img img {
                 width: auto;
                 height: 10em;
             }
 
-        .promo-body-text {
+        .list-promo-body-text {
             text-align: center;
             color: #4A4F54;
         }
@@ -39,11 +39,11 @@
 /* Landscape phones and up */
 @media (min-width: 576px) { 
 
-    .promo {
+    .list-promo {
         padding: 3em 
     }
 
-    .promo:nth-child(1) {
+    .list-promo:nth-child(1) {
         padding: 2em 
     }
 }
@@ -51,31 +51,31 @@
 /* Tablets and up */
 @media (min-width: 768px) { 
 
-    .promo:nth-child(1) {
+    .list-promo:nth-child(1) {
         padding: 3em;
     }
 
-    .promo:nth-child(2) .promo-body {
+    .list-promo:nth-child(2) .list-promo-body {
         flex-direction: row-reverse;
         padding-right: 0em;
         padding-left: 3em;
     }
 
-        .promo-header {
+        .list-promo-header {
             font-size: 1.5em;
         }
 
-        .promo-body {
+        .list-promo-body {
             display: flex;
             align-items: center;
             padding-right: 3em;
         }
 
-            .promo-body-img {
+            .list-promo-body-img {
                 width: 40%;
             }
 
-            .promo-body-text {
+            .list-promo-body-text {
                 font-size: 1.2em;
                 width: 60%;
                 
@@ -86,12 +86,12 @@
 /* Laptops and up */
 @media (min-width: 992px) { 
 
-    .promo:nth-child(2) .promo-body {
+    .list-promo:nth-child(2) .list-promo-body {
         padding-right: 3em;
         padding-left: 8em;
     }
 
-    .promo-body {
+    .list-promo-body {
         padding-left: 3em;
         padding-right: 8em;
     }
@@ -101,21 +101,21 @@
 /* Desktops and up) */
 @media (min-width: 1200px) { 
 
-    .promo:nth-child(2) .promo-body {
+    .list-promo:nth-child(2) .list-promo-body {
         padding-right: 3em;
         padding-left: 10em;
     }
 
-    .promo-body {
+    .list-promo-body {
         padding-right: 10em;
         padding-left: 3em;
     }
 
-        .promo-body-text {
+        .list-promo-body-text {
             font-size: 1.4em;
         }
 
-            .promo-body-img img {
+            .list-promo-body-img img {
                 width: auto;
                 height: 12em;
             }
@@ -124,15 +124,15 @@
 /* HD Desktops and up */
 @media (min-width: 1900px) { 
 
-    .promo-header {
+    .list-promo-header {
         font-size: 2em;
     }
 
-        .promo-body-text {
+        .list-promo-body-text {
             font-size: 1.5em;
         }
 
-            .promo-body-img img {
+            .list-promo-body-img img {
                 width: auto;
                 height: 15em;
             }            

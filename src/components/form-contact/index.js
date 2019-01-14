@@ -1,5 +1,6 @@
 import React from 'react';
 import { withFormik, Field, ErrorMessage } from 'formik';
+import '../buttons/index.js'
 import './styles.css'
 
 function FormContact(props) {
@@ -11,58 +12,73 @@ function FormContact(props) {
     } = props
 
     return (
-        <form className="form-contact" onSubmit={handleSubmit}>
-            <div className="form-contact-field">
-                <label>Nombre</label>
-                <Field type="text" name="name" />
-                <ErrorMessage name="name">
-                    {message => <div className="form-contact-field--error">
-                        {message}
-                    </div>}
-                </ErrorMessage>
+        <React.Fragment>
+            <header>Comentanos, ¿Como podemos ayudarte?</header>
+            <div className="form-contact-message">
+                <div>
+                    Te responderemos en el plazo de 1 día laborable o,
+                    si lo prefieres llamanos al <span>(+55) 68 213 639</span>
+                </div>
             </div>
-            <div className="form-contact-field">
-                <label>Empresa</label>
-                <Field type="text" name="company"/>
-                <ErrorMessage name="company">
-                    {message => <div className="form-contact-field--error">
-                        {message}
-                    </div>}
-                </ErrorMessage>
-            </div>
-            <div className="form-contact-field">
-                <label>Email</label>
-                <Field type="email" name="email" />
-                <ErrorMessage name="email">
-                    {message => <div className="form-contact-field--error">
-                        {message}
-                    </div>}
-                </ErrorMessage>
-            </div>
-            <div className="form-contact-field">
-                <label>Telefono</label>
-                <Field type="text" name="phone"/>
-                <ErrorMessage name="phone">
-                    {message => <div className="form-contact-field--error">
-                        {message}
-                    </div>}
-                </ErrorMessage>
-            </div>
-            <div className="form-contact-field">
-                <label>¿En que podemos ayudarte?</label>
-                <Field component="textarea" name="comments" id="" cols="30" rows="10"></Field>
-                <ErrorMessage name="comments">
-                    {message => <div className="form-contact-field--error">
-                        {message}
-                    </div>}
-                </ErrorMessage>
-            </div>
-            <div className="form-contact-button">
-                <button type="submit" disabled={isSubmitting}>
-                    Enviar
-                </button>
-            </div>
-        </form>
+            <form className="form-contact-body" onSubmit={handleSubmit}>
+                <div className="form-contact-fieldset">
+                    <label>Nombre: </label>
+                    <Field type="text" name="name" className="form-contact-fieldset-field" />
+                    <ErrorMessage name="name">
+                        {message => <div className="form-contact-fieldset-msg">
+                            {message}
+                        </div>}
+                    </ErrorMessage>
+                </div>
+                <div className="form-contact-fieldset">
+                    <label>Empresa: </label>
+                    <Field type="text" name="company" className="form-contact-fieldset-field" />
+                    <ErrorMessage name="company">
+                        {message => <div className="form-contact-fieldset-msg">
+                            {message}
+                        </div>}
+                    </ErrorMessage>
+                </div>
+                <div className="form-contact-fieldset">
+                    <label>Email: </label>
+                    <Field type="email" name="email" className="form-contact-fieldset-field" />
+                    <ErrorMessage name="email">
+                        {message => <div className="form-contact-fieldset-msg">
+                            {message}
+                        </div>}
+                    </ErrorMessage>
+                </div>
+                <div className="form-contact-fieldset">
+                    <label>Telefono: </label>
+                    <Field type="text" name="phone" className="form-contact-fieldset-field"/>
+                    <ErrorMessage name="phone">
+                        {message => <div className="form-contact-fieldset-msg">
+                            {message}
+                        </div>}
+                    </ErrorMessage>
+                </div>
+                <div className="form-contact-fieldset form-contact-fieldset--textarea">
+                    <label>¿En que podemos apoyarte?: </label>
+                    <Field 
+                        component="textarea"
+                        name="comments"
+                        cols="30"
+                        rows="10"
+                        className="form-contact-fieldset-textarea"
+                    ></Field>
+                    <ErrorMessage name="comments">
+                        {message => <div className="form-contact-fieldset-msg">
+                            {message}
+                        </div>}
+                    </ErrorMessage>
+                </div>
+                <div className="form-contact-button">
+                    <button type="submit" className="primary" disabled={isSubmitting}>
+                        Enviar
+                    </button>
+                </div>
+            </form>
+        </React.Fragment>
     )
 }
 

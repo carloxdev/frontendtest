@@ -11,6 +11,7 @@ import '../../components/master/index.js'
 import Header from '../../components/header/index.js'
 import Footer from '../../components/footer/index.js'
 import FormContact from '../../components/form-contact/index.js'
+import TextAddress from '../../components/text-address/index.js'
 import './styles.css'
 
 library.add(faTimes)
@@ -38,6 +39,10 @@ class Page {
         ReactDOM.render(
             <FormContact />,
             document.getElementById('form-contact')
+        )
+        ReactDOM.render(
+            <TextAddress />,
+            document.getElementById('text-address')
         )
         ReactDOM.render(
             <Footer />,
